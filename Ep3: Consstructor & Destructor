@@ -1,0 +1,20 @@
+#Constructor Method ໃນ Python
+class Employee:
+    #ສ້າງmethod __init__
+    def __init__(self,name,sarary,department):  #ສ້າງmethod detail  //def ແມ່ນການປະກາດmethod
+            self.name = name  #ກຳນົດ attribute name
+            self.sarary = sarary #ກຳນົດ attribute sarary
+            self.department = department #ກຳນົດ attribute department
+    def showData(self):  #ສ້າງmethod showData    
+            print("Name = {}".format(self.name))  #ສະແດງ attribute name
+            print("Salary = {}".format(self.sarary))  #ສະແດງ attribute sarary 
+            print("Department = {}".format (self.department))  #ສະແດງ attribute department
+    #def __del__(self):
+            #print("Object is being deleted")  #ສ້າງmethod __del__ ເພື່ອລະບາຍອອບເຈັດ ໃສ່ກະໄດ້ ບໍ່ໃສ່ກະໄດ້
+#ສ້າງອອບເຈັດຈາກclass Employee
+obj1 = Employee('Shubin',5000000,"Programer")
+obj1.showData()
+
+obj2 = Employee('Jotaro',6000000,"Stand User")
+obj2.name = "Kira"  #ການແກ້ໄຂ attribute name ຂອງອອບເຈັດ obj2
+obj2.showData()

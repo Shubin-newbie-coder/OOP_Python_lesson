@@ -1,0 +1,22 @@
+#ສ້າງclass
+class Employee:
+    #ສ້າງmethod __init__
+    def detail(self,name,sarary,department):  #ສ້າງmethod detail  //def ແມ່ນການປະກາດmethod
+            self.name = name  #ກຳນົດ attribute name
+            self.sarary = sarary #ກຳນົດ attribute sarary
+            self.department = department #ກຳນົດ attribute department
+    def showData(self):  #ສ້າງmethod showData    
+            print("Name =",self.name)  #ສະແດງ attribute name
+            print("Salary =",self.sarary)  #ສະແດງ attribute sarary 
+            print("Department =",self.department)  #ສະແດງ attribute department
+#ສ້າງອອບເຈັດຈາກclass Employee
+obj1 = Employee()
+obj1.detail('Shubin',5000000,"Programer")  
+
+obj2 = Employee()
+obj2.detail('Jotaro',6000000,"Stand User") 
+
+#ເອີ້ນmethod showData ຂອງອອບເຈັດ obj1
+obj1.showData()
+obj2.showData()
+

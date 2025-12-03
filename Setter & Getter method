@@ -1,0 +1,36 @@
+#Constructor Method ໃນ Python
+class Employee:
+#protected attribute
+    def __init__(self,name,sarary,department):  #ສ້າງmethod detail  //def ແມ່ນການປະກາດmethod
+        self.__name = name  #ກຳນົດ attribute name
+        self.__sarary = sarary #ກຳນົດ attribute sarary
+        self.__department = department #ກຳນົດ attribute department
+        #protected method
+    def showData(self):  #ສ້າງmethod showData    
+        print("Name = {}".format(self.__name))  #ສະແດງ attribute name
+        print("Salary = {}".format(self.__sarary))  #ສະແດງ attribute sarary 
+        print("Department = {}".format (self.__department))  #ສະແດງ attribute department
+    #setter method
+    def setName(self,newname):  #ສ້າງmethod setDepartment
+        self.__name = newname 
+    def setSarary(self,newsarary):
+        self.__sarary = newsarary
+    def setDepartment(self,department):
+        self.__department = department   
+    #getter method 
+    def getName(self):  #ສ້າງmethod getDepartment
+        return self.__name  #ສະແດງ attribute name
+    def getSarary(self):
+        return self.__sarary  #ສະແດງ attribute sarary
+    def getDepartment(self):
+        return self.__department  #ສະແດງ attribute department
+obj1 = Employee('Shubin',5000000,"Programer")
+
+obj1.setName('John') #ເອີ້ນmethod setName ເພື່ອປ່ຽນແປງ attribute name
+obj1.setSarary(6000000)#ເອີ້ນmethod setSarary ເພື່ອປ່ຽນແປງ attribute sarary
+obj1.setDepartment('Developer')#ເອີ້ນmethod setDepartment ເພື່ອປ່ຽນແປງ attribute department
+
+# obj1.showData()  #ເອີ້ນmethod showData ເພື່ອສະແດງ attribute name,sarary,department
+print("My name is",obj1.getName())
+print("My sarary is {}".format(obj1.getSarary()))
+print("Department: {}".format(obj1.getDepartment()))

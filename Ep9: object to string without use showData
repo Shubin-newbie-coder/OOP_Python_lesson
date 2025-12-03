@@ -1,0 +1,44 @@
+#Constructor Method ໃນ Python
+class Employee:
+    #class variables
+    _minSarary = 15000  #protected variable
+    _maxSarary = 2000000  #private variable
+    _company = "ABC Company"  #public variable
+    def __init__(self,name,sarary,department):  #ສ້າງmethod detail  //def ແມ່ນການປະກາດmethod
+        self.__name = name  #ກຳນົດ attribute name
+        self.__sarary = sarary #ກຳນົດ attribute sarary
+        self.__department = department #ກຳນົດ attribute department
+        #protected method
+    def showData(self):#ສ້າງmethod showData
+        print("Name = {}".format(self.__name))#ສະແດງ attribute name
+        print("Salary = {}".format(self.__sarary))#ສະແດງ attribute sarary
+        print("Department = {}".format (self.__department))#ສະແດງ attribute department
+    #income peryear example
+    def getIncome(self):
+        return self.__sarary * 12
+    #str method
+    def __str__(self): #ການຳໃຊ້ເພື່ອສະແດງຂໍ້ມູນຂອງ object ໃນຮູບແບບ string ໂດຍທີ່ບໍ່ຈຳເປັນຕ້ອງໃຊ້ showData ເພື່ອສະແດງ
+        return "Employee Name: {}, Salary: {}, Department: {}, Income1year: {}".format(self.__name,self.__sarary,self.__department,self.getIncome())
+
+class Accounting(Employee):
+    __departmentName = "Accounting"
+    def __init__(self,name,sarary):
+        super().__init__(name,sarary,self.__departmentName)
+       
+class IT(Employee):
+    __departmentName = "IT"
+    def __init__(self,name,sarary):
+        super().__init__(name,sarary,self.__departmentName)
+        
+class Marketing(Employee):
+    __departmentName = "Marketing"
+    def __init__(self,name,sarary):
+        super().__init__(name,sarary,self.__departmentName)
+        
+
+account = Accounting("A",20000)
+print(Accounting.__str__(account))
+codind = IT("B",25000)
+print(IT.__str__(codind))
+sell = Marketing("C",30000)
+print(Marketing.__str__(sell))
